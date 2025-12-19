@@ -49,7 +49,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-            Analyze website performance with AI-powered insights. Get actionable recommendations to optimize your site's
+            Analyze website performance with AI-powered insights. Get actionable recommendations to optimize your site&apos;s
             search engine visibility.
           </p>
 

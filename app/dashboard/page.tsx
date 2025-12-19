@@ -168,7 +168,7 @@ export default function DashboardPage() {
         <div>
           <h1 className="text-4xl font-bold mb-2">SEO Analysis</h1>
           <p className="text-muted-foreground text-lg">
-            Analyze up to 5 URLs and get AI-powered insights to improve your site's performance
+            Analyze up to 5 URLs and get AI-powered insights to improve your site&apos;s performance
           </p>
         </div>
 
