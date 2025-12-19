@@ -1,97 +1,120 @@
-# SiteSage - Automated SEO Performance Analyzer
+# 🌿 SiteSage - AI-Powered SEO & Performance Analyzer
 
-A modern, production-grade web platform that analyzes website URLs for SEO and performance quality.
+SiteSage is a modern, high-performance SEO auditing platform that leverages AI to provide deep insights into website performance, accessibility, and search engine optimization. Designed for developers and SEO professionals who want speed and actionable data in a beautiful interface.
 
-## Features
+**[🌐 Live Demo](https://site-sage-frontend.vercel.app/)**
 
-- **Authentication**: Secure email/password authentication with JWT tokens
-- **URL Analysis**: Analyze up to 5 URLs simultaneously
-- **JavaScript Rendering**: Choose between standard HTML or full JS rendering
-- **AI-Powered Insights**: Custom and standard analysis with AI recommendations
-- **Real-time Updates**: Auto-polling for audit status updates
-- **Dark/Light Theme**: Beautiful modern UI with theme switching
-- **Responsive Design**: Fully responsive across all devices
+---
 
-## Tech Stack
+## ✨ Features
 
-- **Frontend**: Next.js 16, React 19, TailwindCSS v4
-- **UI Components**: shadcn/ui
-- **State Management**: React hooks with SWR-like patterns
-- **Authentication**: JWT tokens with localStorage
-- **API Integration**: RESTful API with FastAPI backend
+- **🚀 Multi-URL Analysis**: Analyze up to 5 URLs simultaneously with asynchronous processing.
+- **🤖 AI-Powered Insights**: Get intelligent, contextual recommendations powered by advanced language models.
+- **🛠️ Custom Analysis Modes**: Choose between standard audits or define your own custom AI analysis criteria for specific needs.
+- **📊 Detailed SEO Metrics**: Comprehensive scoring for performance, accessibility, SEO, and best practices.
+- **📱 Fully Responsive**: Optimized for all devices, from desktop workstations to mobile phones.
+- **🌓 Dark Mode Support**: A premium, tech-forward interface that looks stunning in both light and dark modes.
+- **⏱️ Fast & Reliable**: Built with modern web technologies for a smooth, lag-free experience.
 
-## Getting Started
+---
+
+## 📸 Interface Preview
+
+### Dashboard Overview
+Explore your SEO landscape with a clean, intuitive dashboard.
+![Dashboard Dark Mode](./public/dashboard-dark.png)
+*SiteSage Dashboard - Dark Mode*
+
+![Dashboard Light Mode](./public/dashboard-light.png)
+*SiteSage Dashboard - Light Mode*
+
+### Deep Analysis & Scores
+Get granular scores and detailed metric breakdowns for every URL.
+![SEO Scores](./public/modal-seo-score.png)
+*Detailed Metric Scoring*
+
+### AI Insights
+Let the AI explain what's wrong and how to fix it in plain English.
+![AI Insights](./public/modal-AI-Insight.png)
+*AI-Generated Optimization Strategies*
+
+### Results History
+Keep track of all your past audits in a sleek card view.
+![Card View](./public/card-view.png)
+*Audit History Management*
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Components**: [Radix UI](https://www.radix-ui.com/) & [Lucide Icons](https://lucide.dev/)
+- **Fonts**: [Outfit](https://fonts.google.com/specimen/Outfit) (Primary), Inter, Montserrat
+- **Testing**: [Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- **CI/CD**: [GitHub Actions](https://github.com/features/actions)
+- **Deployment**: [Vercel](https://vercel.com/)
+
+---
+
+## 🧪 Quality Assurance
+
+### Testing
+SiteSage is built with reliability in mind. We use **Jest** and **React Testing Library** to ensure components behave as expected.
+- **Unit & Integration Tests**: Running tests on core components like `AuditCard` to verify UI logic and data rendering.
+- **Run Tests**:
+  ```bash
+  npm test
+  ```
+
+### CI/CD Pipeline
+Our automated GitHub Actions workflow ensures every push to `main` is healthy and ready for users.
+- **Linting**: Automatic code style verification.
+- **Build Check**: Ensures the application compiles correctly.
+- **Test Suite**: Automatically runs all Jest tests.
+- **Deployment Notification**: A custom notification system that confirms CI success and provides direct links to the Vercel deployment logs and live site.
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
-- Backend API running (see backend documentation)
+- Node.js 20+
+- npm
 
 ### Installation
 
-1. Clone the repository
-2. Install dependencies:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/SamuelMasih777/SiteSage-Frontend.git
+   cd seo-audit-tool
+   ```
+
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-3. Set up environment variables:
-   ```env
-   NEXT_PUBLIC_API_URL=your_backend_api_url
-   ```
-
-4. Run the development server:
+3. **Run the development server**:
    ```bash
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000)
+4. **Run Linting**:
+   ```bash
+   npm run lint
+   ```
 
-## API Configuration
+5. **Build for production**:
+   ```bash
+   npm run build
+   ```
 
-Update the `NEXT_PUBLIC_API_URL` environment variable to point to your FastAPI backend:
+---
 
-```env
-NEXT_PUBLIC_API_URL=https://your-api-domain.com
-```
+## ✒️ Creator
 
-## Features in Detail
+Created and Maintained by **Samuel Masih**
 
-### Authentication
-- Sign up with email and password
-- Secure token-based authentication
-- Automatic token storage and management
-- Protected dashboard routes
-
-### SEO Analysis
-- Input up to 5 URLs for batch analysis
-- Choose JavaScript rendering mode
-- Select standard or custom AI analysis
-- Real-time status updates with auto-polling
-- Detailed metrics and insights display
-
-### Dashboard
-- View all audit history
-- Filter and search capabilities
-- Detailed audit reports with:
-  - SEO scores
-  - Performance metrics
-  - AI-generated insights
-  - Actionable recommendations
-
-## Deployment
-
-Deploy to Vercel with one click:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
-
-Or manually:
-
-```bash
-npm run build
-npm start
-```
-
-## License
-
-MIT
+---
