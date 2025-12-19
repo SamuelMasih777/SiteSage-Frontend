@@ -1,4 +1,4 @@
-name: CI/CD - Test and Deploy to Vercel
+name: CI/CD - Test, Build and Deployment Notification
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-index: '20'
+          node-version: '20'
           cache: 'npm'
           
       - name: Install dependencies
@@ -29,18 +29,43 @@ jobs:
       - name: Run tests
         run: npm test
 
-  deploy:
+  build:
     needs: test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v20
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.ORG_ID }}
-          vercel-project-id: ${{ secrets.PROJECT_ID }}
-          vercel-args: '--prod'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build application
+        run: npm run build
+
+  deploy-notification:
+    name: Vercel Deployment
+    runs-on: ubuntu-latest
+    needs: [test, build]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Deployment notification
+        run: |
+          echo "════════════════════════════════════════"
+          echo "🎉 CI PASSED SUCCESSFULLY"
+          echo ""
+          echo "🚀 Vercel is deploying your frontend"
+          echo ""
+          echo "🌐 Frontend will be live at:"
+          echo "👉 https://sitesage-frontend.vercel.app/"
+          echo ""
+          echo "⏱️  Deployment usually takes 1–3 minutes"
+          echo ""
+          echo "📊 Monitor deployment status at:"
+          echo "👉 https://vercel.com/dashboard"
+          echo "════════════════════════════════════════"

@@ -12,23 +12,11 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "SiteSage - Automated SEO Performance Analyzer",
   description: "Analyze website URLs for SEO and performance quality with AI-powered insights",
-  generator: "v0.app",
+  authors: [{ name: "Samuel Masih" }],
+  creator: "Samuel Masih",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/gemini.png",
+    apple: "/gemini.png",
   },
 }
 
